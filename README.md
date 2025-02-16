@@ -1,9 +1,9 @@
-#<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeeMourCoin ($SMC) - Chaos Cat Meme Generator</title>
+    <title>SeeMourCoin ($SMC) - The Future of Cat Memes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,15 +37,11 @@
         .chaos-button:hover {
             background-color: #ffaa00;
         }
-        .meme-container {
+        .meme-output {
             margin-top: 20px;
-        }
-        .meme-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            font-size: 22px;
+            font-style: italic;
+            color: #ff99ff;
         }
     </style>
 </head>
@@ -57,15 +53,23 @@
         
         <button class="chaos-button" onclick="generateMeme()">Generate a Chaos Meme</button>
         
-        <div class="meme-container">
-            <img id="memeImage" class="meme-img" src="https://cataas.com/cat/says/SeeMourCoin%20to%20the%20moon!" alt="Random Cat Meme">
-        </div>
+        <p class="meme-output" id="memeText">😺 Click the button to unleash chaos! 😺</p>
     </div>
 
     <script>
+        const memes = [
+            "😹 When you accidentally send 10,000 $SMC to your cat...",
+            "🐱‍👤 SMC: The only crypto endorsed by Schrödinger's cat.",
+            "🚀 Cat memes + Blockchain = Financial Freedom",
+            "💎 HODL, but make it cat memes!",
+            "😼 Powered by chaos, ruled by felines!",
+            "🐾 Every block mined, a new cat meme is born.",
+            "🎩 This cat just made 10x on $SMC, what about you?"
+        ];
+
         function generateMeme() {
-            // Using Cataas API for random cat memes
-            document.getElementById("memeImage").src = "https://cataas.com/cat?" + new Date().getTime();
+            const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+            document.getElementById("memeText").innerText = randomMeme;
         }
     </script>
 </body>
